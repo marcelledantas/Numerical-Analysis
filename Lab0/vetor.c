@@ -52,9 +52,9 @@ void vet_imprime (int n, double* v){
   int i;
 
   for(i = 0; i < n; i++){
-    printf("%f  ", v[i]);
+    printf("%.5g  ", v[i]);
   }
-  printf("\n");
+   printf("\n");
 }
 
 
