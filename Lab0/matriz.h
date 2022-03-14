@@ -1,4 +1,3 @@
-#include<math.h>
 double** mat_cria (int m, int n);
 void mat_libera (int m, double** A);
 void mat_transposta (int m, int n, double** A, double** T);

@@ -1,4 +1,3 @@
-#include<math.h>
 double* vet_cria (int n);
 void vet_libera (double* v);
 double vet_escalar (int n, double* v, double* w);
