@@ -19,7 +19,7 @@ int main (void){
   cossenoAprox = avalia_cosseno (N, PI/6);
   printf("\n Cosseno aproximado pi/6 é: %lf e o cos(PI/6) é: %lf\n", cossenoAprox, cos(PI/6));
 
-    cossenoAprox = avalia_cosseno (N, PI/4);
+  cossenoAprox = avalia_cosseno (N, PI/4);
   printf("\n Cosseno aproximado pi/4 é: %lf e o cos(PI/4) é: %lf\n", cossenoAprox, cos(PI/4));
 
   cossenoAprox = avalia_cosseno (N, PI/3);
