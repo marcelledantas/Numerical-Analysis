@@ -25,7 +25,7 @@ int main (void){
   cossenoAprox = avalia_cosseno (N, PI/3);
   printf("\n Cosseno aproximado pi/3 é: %lf e o cos(PI/3) é: %lf\n",       cossenoAprox, cos(PI/3));
 
- printf("\n\n");
+  printf("\n\n");
   
   double senoAprox = avalia_seno (N, PI/10);
   printf("\n Seno aproximado pi/10 é: %lf e o sen(PI/10) é: %lf\n",senoAprox, sin(PI/10));
