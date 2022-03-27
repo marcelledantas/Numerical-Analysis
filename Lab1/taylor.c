@@ -17,7 +17,6 @@ double avalia_taylor (int n, double *c, double x0, double x){
     
   }
   
-  vet_libera(c);
   return termo;
 }
 
