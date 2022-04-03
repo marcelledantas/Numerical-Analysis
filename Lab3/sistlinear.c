@@ -10,14 +10,13 @@ void gauss (int n, double** A, double* b, double* x){
   int i, j, k, p;
   double fatorF, s, temp1, temp2;
   
-  for(j = 0; j < n - 2; j ++){
-
+  for(j = 0; j < n - 1; j ++){
 
     p = j;
     
     //pivoteamento - antes da eliminação da coluna j
 
-    for(k = j + 1; k < n - 1; k ++){
+    for(k = j + 1; k < n; k ++){
       
       if( fabs(A[k][j]) > fabs(A[p][j]) ){
         p = k;
@@ -26,7 +25,7 @@ void gauss (int n, double** A, double* b, double* x){
     } //for
 
     //troca linhas j e p
-    for (k = j; k < n - 1; k ++){
+    for (k = j; k < n; k ++){
       
       temp1 = A[j][k];
       A[j][k] = A[p][k];
@@ -40,12 +39,12 @@ void gauss (int n, double** A, double* b, double* x){
 
     //Elimina coluna j
 
-    for(i = j + 1; i < n - 1; i ++){
+    for(i = j + 1; i < n; i ++){
       
       //Elimina aij
       fatorF = A[i][j] / A[j][j];
 
-      for(k = j; k < n - 1; k ++){
+      for(k = j; k < n; k ++){
 
         A[i][k] = A[i][k] - A[j][k] * fatorF;
 
@@ -64,7 +63,7 @@ void gauss (int n, double** A, double* b, double* x){
    
     s = 0;
 
-    for(j = i + 1; j < n - 1; j ++){
+    for(j = n - 1; j > i; j --){
 
       s = s + A[i][j] * x[j];
     

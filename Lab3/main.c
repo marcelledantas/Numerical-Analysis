@@ -6,7 +6,7 @@
 #include "matriz.h"
 #include "vetor.h"
 
-#define N 3
+#define N 6
 
 int main (void){
 
