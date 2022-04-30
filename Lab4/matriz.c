@@ -2,8 +2,6 @@
 #include<stdlib.h>
 #include<math.h>
 
-#include "matriz.h"
-
 double** mat_cria (int m, int n){
   double **matrix = (double**)malloc(m * sizeof(double*));
   int i;

@@ -7,6 +7,14 @@
 
 #define N 6
 
+
+double f (double x){
+
+  double raiz = x * x * x + x  - 7; //mudar
+  return raiz;
+}
+
+
 int main (void){
   
   double a = 0.0;
@@ -26,7 +34,13 @@ int main (void){
     printf("xi[%d] = %lf\n", i, xi[i]);
   }
 
+
+  double* bi = vet_cria (N);
+
+  coeficientes (N, xi, f, bi);
+
   vet_libera(xi);
+  vet_libera(bi);
 
   return 0;
 }
