@@ -1,2 +1,2 @@
 command line (run):
-gcc main.c -o main
+gcc -Wall -o main main.c vetor.c matriz.c -lm
