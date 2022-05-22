@@ -9,6 +9,11 @@
 
 
 #define Q 3
+#define M 4
+#define W 4
+    /*
+    * Testar e imprimir vetores e resultados
+    */
 
 double mmq (int m, int n, double** A, double* b, double* x){
 
@@ -23,15 +28,15 @@ double mmq (int m, int n, double** A, double* b, double* x){
     */
     mat_transposta (m, n, A, T);
       int i, j;
-      printf("\n**Exibindo a matriz T**\n");
-    for(j = 0; j < n; j ++){
+  //     printf("\n**Exibindo a matriz T**\n");
+  //   for(j = 0; j < n; j ++){
 
-    for(i = 0; i < m; i ++){
+  //   for(i = 0; i < m; i ++){
 
-      printf("A[%d][%d] = %lf\n", i, j, A[i][j]);
+  //     printf("A[%d][%d] = %lf\n", i, j, A[i][j]);
 
-    }
-  }
+  //   }
+  // }
     
     mat_multm (m, n, Q, A, T, AtA);
     mat_multv (m, n, T, b, Atb);
@@ -57,9 +62,38 @@ double mmq (int m, int n, double** A, double* b, double* x){
 }
 
 
-
 double ajuste_parabola (int n, double* px, double* py, double* a, double* b, double* c){
+  
+  double** A = mat_cria (M, n);
+  int i, j;
+
+  for(i = 0; i < M; i++){
+    for(j = 0; j < n; j++){
+
+      A[i][j] = 1.0;
+      j++;
+      A[i][j] = px[i];
+      j++;
+      A[i][j] = px[i] * px[i];
+
+    }
+  }
+
+    printf("**\nExibindo a matriz A do ajuste de parábola**\n");
+    for(i = 0; i < M; i ++){
+
+      for(j = 0; j < n; j ++){
+
+        printf("A[%d][%d] = %lf\n", i, j, A[i][j]);
+
+      }
+    }
+
+  // double* x = vet_cria (n);
+  // double residuo = mmq (M, n, A, py, x);
+
   return 0.0;
+
 }
 
 double ajuste_cubica (int n, double* px, double* py, double* a, double* b, double* c, double* d){
