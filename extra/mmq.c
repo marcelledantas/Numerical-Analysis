@@ -22,13 +22,19 @@ double mmq (int m, int n, double** A, double* b, double* x){
     double* Atb = vet_cria (n);
     double* Ax_bar = vet_cria (n);
     double* r = vet_cria (n);
-
+    int i, j;
     /*
     * Aplicação do MMQ
     */
     mat_transposta (m, n, A, T);
-      int i, j;
-  //     printf("\n**Exibindo a matriz T**\n");
+
+  //   for(i = 0; i < n; i++){
+  //     for(j = 0; j < m; j++){
+  //     printf("\nT[%d][%d] = %lf\n", i, j, T[i][j]);
+  //   }
+  // }
+      
+  //   printf("\n**Exibindo a matriz T**\n");
   //   for(j = 0; j < n; j ++){
 
   //   for(i = 0; i < m; i ++){
@@ -38,13 +44,28 @@ double mmq (int m, int n, double** A, double* b, double* x){
   //   }
   // }
     
-    mat_multm (m, n, Q, A, T, AtA);
-    mat_multv (m, n, T, b, Atb);
+    mat_multm (m, n, m, A, T, AtA);
 
+  //   for(i = 0; i < m; i++){
+  //     for(j = 0; j < m; j++){
+  //     printf("\nAtA[%d][%d] = %lf\n", i, j, AtA[i][j]);
+  //   }
+  // }
+
+
+    mat_multv (n, m, T, b, Atb);
+   
+    // for(i = 0; i < n; i++){
+    //   printf("\nAtb[%d] = %lf\n", i, Atb[i]);
+    // }
     /*
     * Resolvendo o sistema linear pelo método de Gauss
     */
-    gauss (n, AtA, b, x);
+    gauss (n, AtA, Atb, x);
+
+    // for(j = 0; j < n; j++){
+    //   printf("\nxgauss[%d] = %lf\n", j, x[j]);
+    // }
 
     /*
     * Substituindo no sistema original
