@@ -42,7 +42,7 @@ void simula (double x0, double y0, double t_final, int n, double* x, double* y){
 
   double h;
   double tempoCorrente, iter, tH, Xatual = x0, Xantes = x0, Yatual = y0, Yantes = y0;
-  int i = 1;
+  int i = 1.0;
   double *ex, *ey;
 
   iter = 1.0;
