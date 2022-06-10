@@ -1,0 +1,1 @@
+gcc -Wall -o main main.c gradconj.c vetor.c matriz.c -lm

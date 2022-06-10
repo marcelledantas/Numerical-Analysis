@@ -29,7 +29,7 @@ int gradconj(int n, double **A, double *b, double *x, double tol)
     dk0[i] = rk0[i];
   }
 
-  for (int k = 0; k < n; k++)
+  for (k = 0; k < n; k++)
   {
     if (vet_norma2(n, rk0) < tol)
     {
@@ -107,7 +107,7 @@ int gradconj_jacobi(int n, double **A, double *b, double *x, double tol)
     zk0[i] = (rk0[i] / A[i][i]);
   }
 
-  for (int k = 0; k < n; k++)
+  for (k = 0; k < n; k++)
   {
     if (vet_norma2(n, rk0) < tol)
     {
