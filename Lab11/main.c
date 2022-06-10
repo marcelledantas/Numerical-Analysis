@@ -62,7 +62,7 @@ int main(void)
   }
 
   int numItergradconjJacobi = gradconj_jacobi(n, A, b, x, tol);
-  printf("\n***Resultados aplicando Gradiente Conjugados - Com Precondicionador***\n");
+  printf("\n****Resultados aplicando Gradiente Conjugados - Com Precondicionador****\n");
 
   printf("Número de iterações = %d\n", numItergradconjJacobi);
 
