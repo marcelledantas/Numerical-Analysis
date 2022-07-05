@@ -1,0 +1,9 @@
+Solucão Analítica Simplificada
+theta0 = 0.15708:
+a:=pointplot([[0, 0.15708]Solucão Analítica Simplificada
+theta0 = 0.10472:
+a:=pointplot([[0, 0.10472]Solucão Analítica Simplificada
+theta0 = 0.5236:
+a:=pointplot([[0, 0.5236]Solucão Analítica Simplificada
+theta0 = 1.0472:
+a:=pointplot([[0, 1.0472]
